@@ -5,7 +5,13 @@ __pycache__/
 
 # C extensions
 *.so
-
+# idea
+.idea/
+*.iml
+misc.xml
+modules.xml
+profiles_settings.xml
+vsc.xml
 # Distribution / packaging
 .Python
 build/
