@@ -1,17 +1,20 @@
-import openai
+from openai import OpenAI
 
 from config import Config
 from promet import Promet
 
-openai.api_base = Config.BASE_URL
-openai.api_key = Config.API_KEY
+client = OpenAI(
+    # This is the default and can be omitted
+    api_key=Config.API_KEY,
+    base_url=Config.BASE_URL,
+)
 
 
-def request_openai(input: str):
-    return openai.Completion.create(
-        engine=Config.MODEL,
+def request_openai(input_text: str):
+    return client.chat.completions.create(
         messages=[
             {"role": "system", "content": Promet},
-            {"role": "user", "content": input}
-        ]
-    ).choices[0].text.strip()
+            {"role": "user", "content": input_text}
+        ],
+        model=Config.MODEL
+    ).choices[0].message.content
