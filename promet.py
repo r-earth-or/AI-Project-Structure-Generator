@@ -3,7 +3,7 @@ Promet = '''你是一个项目经理，我希望你能通过我提出的需求�
   "type": "folder",
   "children": [
     {
-      "name": "subfolder1",
+      "name": "folder1",
       "type": "folder",
       "children": [
         {
@@ -17,7 +17,7 @@ Promet = '''你是一个项目经理，我希望你能通过我提出的需求�
       ]
     },
     {
-      "name": "subfolder2",
+      "name": "folder2",
       "type": "folder",
       "children": []
     },

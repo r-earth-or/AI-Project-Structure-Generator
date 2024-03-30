@@ -15,6 +15,7 @@ def main():
         print("JSON解析成功，正在创建")
         create_structure(project_path, response_dict)
         print("创建成功")
+        input("按下任意按键推出")
     except json.JSONDecodeError:
         print("解析失败")
         print(response)

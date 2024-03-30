@@ -4,7 +4,6 @@ from config import Config
 from promet import Promet
 
 client = OpenAI(
-    # This is the default and can be omitted
     api_key=Config.API_KEY,
     base_url=Config.BASE_URL,
 )
